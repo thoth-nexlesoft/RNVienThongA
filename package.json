@@ -1,0 +1,32 @@
+{
+	"name": "RNVienThongA",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force",
+		"clean:android": "cd android/ && ./gradlew clean && cd .. && react-native run-android",
+		"newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean --force && npm i",
+		"android": "react-native run-android",
+		"ios": "react-native run-ios",
+		"build": "cd android && ./gradlew assembleRelease && cd ../",
+		"log-a": "react-native log-android",
+		"log-i": "react-native log-ios",
+		"a": "react-native run-android",
+		"i": "react-native run-ios"
+	},
+	"dependencies": {
+		"react": "16.0.0",
+		"react-native": "0.50.4"
+	},
+	"devDependencies": {
+		"babel-jest": "22.4.3",
+		"babel-preset-react-native": "4.0.0",
+		"jest": "22.4.3",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
